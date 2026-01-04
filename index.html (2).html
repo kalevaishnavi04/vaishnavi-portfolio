@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vaishnavi Kale | AI & Data Analytics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background: #0b1220; color: #e5e7eb; line-height: 1.6; overflow-x: hidden; }
+    a { color: #22d3ee; text-decoration: none; }
+
+    /* ===== Gradient Header ===== */
+    header {
+      padding: 80px 10% 100px;
+      text-align: center;
+      background: linear-gradient(135deg, #0ea5e9, #22d3ee, #6366f1);
+      position: relative;
+    }
+
+    /* ===== Animated Profile ===== */
+    .profile-wrapper {
+      display: inline-block;
+      padding: 6px;
+      border-radius: 18px;
+      background: linear-gradient(270deg, #22d3ee, #6366f1, #22d3ee);
+      background-size: 400% 400%;
+      animation: borderGlow 6s ease infinite;
+      margin-bottom: 18px;
+    }
+    @keyframes borderGlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    header img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+      background: #020617;
+    }
+
+    header h1 { font-size: 3rem; font-weight: 700; }
+    header h1 span { color: #020617; }
+    header p { margin-top: 12px; font-size: 1.1rem; color: #020617; }
+    nav { margin-top: 25px; }
+    nav a { margin: 0 15px; font-weight: 600; color: #020617; }
+
+    /* ===== Sections ===== */
+    section { padding: 90px 10%; position: relative; }
+    .section-title { font-size: 2rem; margin-bottom: 40px; text-align: center; }
+
+    /* ===== Glassmorphism Cards ===== */
+    .skills-grid, .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
+    .card {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-radius: 18px;
+      padding: 26px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+    .card:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 16px 40px rgba(34,211,238,0.25);
+    }
+    .card h3 { color: #22d3ee; margin-bottom: 8px; }
+
+    /* ===== Footer ===== */
+    footer { background: #020617; padding: 40px 10%; text-align: center; }
+    footer p { color: #9ca3af; }
+
+    .btn { display: inline-block; margin-top: 20px; padding: 12px 32px; background: #22d3ee; color: #020617; border-radius: 30px; font-weight: 600; }
+
+    /* ===== Particles Canvas ===== */
+    #particles {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.4rem; }
+      header p { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+<canvas id="particles"></canvas>
+
+<header>
+  <div class="profile-wrapper">
+    <img src="vaishnavi_profile.jpg" alt="Vaishnavi Kale">
+  </div>
+  <h1>Vaishnavi <span>Kale</span></h1>
+  <p>B.E. Information Technology | AIML & Data Science Enthusiast</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="about" class="about">
+  <h2 class="section-title">About Me</h2>
+  <p>
+    I am a IT Graduate Student with a strong interest in Artificial Intelligence, Machine Learning, and Data Science. My academic journey has equipped me with a solid foundation in computer engineering, programming, and problem-solving. I am eager to apply my skills through internships and real-world projects while continuously learning and growing in the AI/ML domain.
+  </p>
+</section>
+
+<section id="skills">
+  <h2 class="section-title">Skills</h2>
+  <div class="skills-grid">
+    <div class="card">Python, SQL, Pandas, NumPy</div>
+    <div class="card">Machine Learning & Scikit-learn</div>
+    <div class="card">Deep Learning (TensorFlow, Keras)</div>
+    <div class="card">Data Analysis & EDA</div>
+    <div class="card">Computer Vision & OpenCV</div>
+    <div class="card">ETL Basics & Data Pipelines</div>
+    <div class="card">Power BI & Data Visualization</div>
+  </div>
+    <div class="card">Machine Learning, Deep Learning</div>
+    <div class="card">TensorFlow, Keras, Scikit-learn</div>
+    <div class="card">Computer Vision & OpenCV</div>
+    <div class="card">Django, Bootstrap, Web Development</div>
+    <div class="card">Data Visualization & EDA</div>
+  </div>
+    <div class="card">Machine Learning & Scikit-learn</div>
+    <div class="card">Generative AI & RAG</div>
+    <div class="card">Power BI & Data Visualization</div>
+    <div class="card">ETL Pipelines & EDA</div>
+    <div class="card">MySQL, PostgreSQL, AWS (Basic)</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="section-title">Projects</h2>
+  <div class="projects-grid">
+    <div class="card">
+      <h3>Fashion Item Classifier (Deep Learning)</h3>
+      <p>End-to-end deep learning application using Fashion-MNIST dataset with image upload and prediction interface.</p>
+      <p><strong>Tech:</strong> TensorFlow, Keras, Streamlit, Python</p>
+      <a href="https://github.com/kalevaishnavi04" target="_blank">View Project →</a>
+    </div>
+    <div class="card">
+      <h3>QR Based Attendance System</h3>
+      <p>Automated attendance system using QR codes with secure data storage and real-time analytics.</p>
+      <p><strong>Tech:</strong> Python, OpenCV, Pandas, QR Code</p>
+      <a href="https://github.com/kalevaishnavi04" target="_blank">View Project →</a>
+    </div>
+    <div class="card">
+      <h3>Face Detection using OpenCV</h3>
+      <p>Real-time face detection and recognition system using Haar Cascade and ML techniques.</p>
+      <p><strong>Tech:</strong> Python, OpenCV, Computer Vision</p>
+      <a href="https://github.com/kalevaishnavi04" target="_blank">View Project →</a>
+    </div>
+  </div>
+    <div class="card">
+      <h3>RAG Chatbot</h3>
+      <p>Document-based AI assistant using Retrieval-Augmented Generation and Streamlit.</p>
+      <a href="https://github.com/kalevaishnavi04/RAG-chatbot" target="_blank">View Project →</a>
+    </div>
+    <div class="card">
+      <h3>Consumer Shopping Behavior Analysis</h3>
+      <p>Retail analytics project with Python, SQL, and Power BI dashboards.</p>
+      <a href="https://github.com/kalevaishnavi04/Data-Analysis" target="_blank">View Project →</a>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2 class="section-title">Internships & Experience</h2>
+  <div class="experience-item">
+    <h3>AIML with Data Science Intern</h3>
+    <p><strong>Vareli Tecnac Pvt. Ltd.</strong> | Dec 2024 – Dec 2025</p>
+    <p>Worked on data preprocessing, ML model building, evaluation, and visualization using Python, SQL, Pandas, NumPy, Scikit-learn, and basic Deep Learning with TensorFlow/PyTorch. Applied NLP techniques and gained end-to-end AI/ML workflow experience.</p>
+  </div>
+  <div class="experience-item">
+    <h3>Python Django Intern</h3>
+    <p><strong>SSIT Pvt. Ltd., Nagpur</strong> | Jul 2022 – Aug 2022</p>
+    <p>Developed web applications using Django framework, implemented backend logic, handled databases, and worked on real-world coding assignments following MVC and REST principles.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">Contact</h2>
+  <p>Email: <a href="mailto:kalevaishanvi833@gmail.com">kalevaishanvi833@gmail.com</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/vaishnavi-kale-6846322a9/" target="_blank">View Profile</a></p>
+  <p>GitHub: <a href="https://github.com/kalevaishnavi04" target="_blank">View Repositories</a></p>
+  <a class="btn" href="CV.kalevaishnavimanik (1).pdf" download>Download Resume</a>
+</section>
+
+<footer>
+  <p>© 2026 Vaishnavi Kale</p>
+</footer>
+
+<script>
+/* ===== Simple AI-style background particles ===== */
+const canvas = document.getElementById('particles');
+const ctx = canvas.getContext('2d');
+let w, h;
+function resize(){ w = canvas.width = window.innerWidth; h = canvas.height = window.innerHeight; }
+window.addEventListener('resize', resize); resize();
+
+const particles = Array.from({length: 80}, () => ({
+  x: Math.random()*w,
+  y: Math.random()*h,
+  r: Math.random()*2+1,
+  vx: (Math.random()-0.5)*0.6,
+  vy: (Math.random()-0.5)*0.6
+}));
+
+function animate(){
+  ctx.clearRect(0,0,w,h);
+  particles.forEach(p => {
+    p.x += p.vx; p.y += p.vy;
+    if(p.x<0||p.x>w) p.vx*=-1;
+    if(p.y<0||p.y>h) p.vy*=-1;
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fillStyle = 'rgba(34,211,238,0.6)';
+    ctx.fill();
+  });
+  requestAnimationFrame(animate);
+}
+animate();
+</script>
+</body>
+</html>
